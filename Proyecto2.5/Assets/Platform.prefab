@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5020460141359099607}
   - component: {fileID: 5020460141359099609}
   - component: {fileID: 5020460141359099608}
+  - component: {fileID: 5510134598687991462}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5020460141359099604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.5, z: 0}
-  m_LocalScale: {x: 8.810711, y: 0.5522, z: 1}
+  m_LocalPosition: {x: -1.6304, y: -0.5, z: 0}
+  m_LocalScale: {x: 1.4697082, y: 0.1861411, z: 0.33709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,3 +132,17 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &5510134598687991462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020460141359099604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc8f59c4d8d8d54e86be062cbf6b972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _deathLimit: -6
