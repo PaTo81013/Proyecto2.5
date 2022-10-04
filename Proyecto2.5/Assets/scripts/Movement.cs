@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class Movement : MonoBehaviour
 {
     Rigidbody2D m_RigidBody;
@@ -12,15 +9,12 @@ public class Movement : MonoBehaviour
     bool isGrounded;
     public Transform groundPositionCheck;
     public LayerMask groundLayer;
-    // Start is called before the first frame update
     void Start()
     {
        m_RigidBody= GetComponent<Rigidbody2D>();
         m_speed = 10f;
         jumpsNumber = jumpsNumberValue;
     }
-
-    // Update is called once per frame
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundPositionCheck.position, 0.1f, groundLayer); 
@@ -45,8 +39,6 @@ public class Movement : MonoBehaviour
             jumpsNumber = jumpsNumberValue;
         }
         float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontalInput, 0) * movespeed * Time.deltaTime);
-        
+        transform.Translate(new Vector3(horizontalInput, 0) * movespeed * Time.deltaTime);   
     }
-
 }
