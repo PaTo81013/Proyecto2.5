@@ -4,6 +4,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D m_RigidBody;
     [SerializeField] private float m_speed;
     [SerializeField] private float movespeed = 10;
+    [SerializeField] private float input;
     [SerializeField] private int jumpsNumber;
     [SerializeField] private int jumpsNumberValue;
     [SerializeField] private bool isGrounded;
@@ -42,7 +43,38 @@ public class Movement : MonoBehaviour
         {
             jumpsNumber = jumpsNumberValue;
         }
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontalInput, 0) * movespeed * Time.deltaTime);   
+        //float horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(new Vector3(input, 0) * movespeed * Time.deltaTime);   
+    }
+
+    public void moveLeft()
+    {
+        input = -1;
+    }
+    public void moveRight()
+    {
+        input = 1;
+    }
+    public void Resetleft()
+    {
+       if(input==-1)
+        {
+            input=0;
+        }
+       else
+        {
+            return;
+        }
+    }
+    public void Resetright()
+    {
+        if (input == 1)
+        {
+            input = 0;
+        }
+        else
+        {
+            return;
+        }
     }
 }
