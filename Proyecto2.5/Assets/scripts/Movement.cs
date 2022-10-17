@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.Translate(new Vector3(input, 0) * movespeed * Time.deltaTime);
+        transform.Translate(new Vector3(input, 0) * movespeed * Time.fixedDeltaTime);
     }
 
     public void moveLeft()
