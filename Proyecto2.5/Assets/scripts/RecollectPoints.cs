@@ -18,7 +18,7 @@ public class RecollectPoints : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Platform"))
+        if (collision.CompareTag("balon"))
         {
             Destroy(collision.gameObject);
             GameManager.GetComponent<GameManager>().IncreaseScore(1);

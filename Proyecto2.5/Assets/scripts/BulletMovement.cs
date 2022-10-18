@@ -1,7 +1,7 @@
 using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
-    [SerializeField] private float _velocity=4f;
+    [SerializeField] private float _velocity = 4f;
 
     void Update()
     {

@@ -1,21 +1,21 @@
 using UnityEngine;
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D m_RigidBody;
-    [SerializeField] private float m_speed;
+    [SerializeField] private Rigidbody2D _RigidBody;
+    [SerializeField] private float _speed;
     [SerializeField] private float movespeed = 5;
-    [SerializeField] private float input;
-    [SerializeField] private int jumpsNumber;
-    [SerializeField] private int jumpsNumberValue;
+    [SerializeField] private float _input;
+    [SerializeField] private int _jumpsNumber;
+    [SerializeField] private int _jumpsNumberValue;
     [SerializeField] private bool isGrounded;
     [SerializeField] private Transform groundPositionCheck;
     [SerializeField] private LayerMask groundLayer;
 
     void Start()
     {
-        m_RigidBody = GetComponent<Rigidbody2D>();
-        m_speed = 10f;
-        jumpsNumber = jumpsNumberValue;
+        _RigidBody = GetComponent<Rigidbody2D>();
+        _speed = 10f;
+        _jumpsNumber = _jumpsNumberValue;
     }
 
     void Update()
@@ -25,23 +25,23 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpsNumber--;
-                m_RigidBody.velocity = transform.up * m_speed;
+                _jumpsNumber--;
+                _RigidBody.velocity = transform.up * _speed;
             }
         }
 
-        else if (jumpsNumber > 0)
+        else if (_jumpsNumber > 0)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                jumpsNumber--;
-                m_RigidBody.velocity = transform.up * m_speed;
+                _jumpsNumber--;
+                _RigidBody.velocity = transform.up * _speed;
             }
         }
 
-        if (isGrounded && m_RigidBody.velocity.y == 0)
+        if (isGrounded && _RigidBody.velocity.y == 0)
         {
-            jumpsNumber = jumpsNumberValue;
+            _jumpsNumber = _jumpsNumberValue;
         }
         //float horizontalInput = Input.GetAxis("Horizontal");
         
@@ -52,33 +52,33 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.Translate(new Vector3(input, 0) * movespeed * Time.fixedDeltaTime);
+        transform.Translate(new Vector3(_input, 0) * movespeed * Time.fixedDeltaTime);
     }
 
     public void moveLeft()
     {
-        input = -1;
+        _input = -1;
     }
     public void moveRight()
     {
-        input = 1;
+        _input = 1;
     }
     public void Resetleft()
     {
-       if(input==-1)
-        {
-            input=0;
-        }
+       if(_input==-1)
+       {
+            _input=0;
+       }
        else
-        {
+       {
             return;
-        }
+       }
     }
     public void Resetright()
     {
-        if (input == 1)
+        if (_input == 1)
         {
-            input = 0;
+            _input = 0;
         }
         else
         {

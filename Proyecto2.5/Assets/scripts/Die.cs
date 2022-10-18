@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Die : MonoBehaviour
 {
-    [SerializeField] private GameObject PlayerDie;
+    [SerializeField] private GameObject _playerDie;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Platform"))
+        if (other.gameObject.CompareTag("balon"))
         {
             Destroy(gameObject);
-            PlayerDie.SetActive(true);
+            _playerDie.SetActive(true);
         }
     }
 }

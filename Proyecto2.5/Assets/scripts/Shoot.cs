@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private GameObject _bullets;
-    [SerializeField] private Transform _direction;
+    [SerializeField] private GameObject _bullets = null;
+    [SerializeField] private Transform _direction = null;
     [SerializeField] private float _amountbullets = 10f;
     
 
