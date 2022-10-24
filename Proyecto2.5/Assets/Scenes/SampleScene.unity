@@ -298,8 +298,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237268946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005999565, y: 0.2342, z: 10}
-  m_LocalScale: {x: 0.8113095, y: 0.79658675, z: 1}
+  m_LocalPosition: {x: 0.0019, y: 0.2283, z: 10}
+  m_LocalScale: {x: 0.80903786, y: 0.79754287, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -675,8 +675,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396376936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1089, y: -4.7336, z: 0}
-  m_LocalScale: {x: 1.401366, y: 0.111339204, z: 1}
+  m_LocalPosition: {x: -6.1148, y: -4.7393, z: 0}
+  m_LocalScale: {x: 1.4043088, y: 0.11417836, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1977,7 +1977,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &1630342815
 Transform:
@@ -2008,12 +2008,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febda328a5b89f94ba2482196e5ba3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RigidBody: {fileID: 1630342812}
-  m_speed: 0
+  _RigidBody: {fileID: 0}
+  _speed: 0
   movespeed: 5
-  input: 0
-  jumpsNumber: 0
-  jumpsNumberValue: 2
+  _input: 0
+  _jumpsNumber: 0
+  _jumpsNumberValue: 0
   isGrounded: 0
   groundPositionCheck: {fileID: 1781431963}
   groundLayer:
