@@ -7,6 +7,7 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private Transform _platformParent = null;
     [SerializeField] private GameObject _platformPrefab = null;
     [SerializeField] private float _spawnInterval = 0.5f;
+    
 
     private void Start()
     {
