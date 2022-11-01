@@ -1977,7 +1977,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &1630342815
 Transform:
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febda328a5b89f94ba2482196e5ba3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _RigidBody: {fileID: 0}
+  _RigidBody: {fileID: 1630342812}
   _speed: 0
   movespeed: 5
   _input: 0

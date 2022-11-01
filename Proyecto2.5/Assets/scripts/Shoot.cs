@@ -6,13 +6,8 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GameObject _bullets = null;
     [SerializeField] private Transform _direction = null;
     [SerializeField] private float _amountbullets = 10f;
-    
 
-    void Update()
-    {
-    }
-
-   public void Shoots()
+    public void Shoots()
     {
         if (_amountbullets > 0)
         {

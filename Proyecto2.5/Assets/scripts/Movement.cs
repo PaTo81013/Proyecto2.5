@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _RigidBody;
@@ -43,13 +44,8 @@ public class Movement : MonoBehaviour
         {
             _jumpsNumber = _jumpsNumberValue;
         }
-        //float horizontalInput = Input.GetAxis("Horizontal");
-        
-        //Vector2 _movespeed = m_RigidBody.velocity;
-        //_movespeed.x = Input.GetAxisRaw("Horizontal") * m_speed;
-        //m_RigidBody.velocity= _movespeed;
-
     }
+
     private void FixedUpdate()
     {
         transform.Translate(new Vector3(_input, 0) * movespeed * Time.fixedDeltaTime);
@@ -59,21 +55,24 @@ public class Movement : MonoBehaviour
     {
         _input = -1;
     }
+
     public void moveRight()
     {
         _input = 1;
     }
+
     public void Resetleft()
     {
-       if(_input==-1)
-       {
-            _input=0;
-       }
-       else
-       {
+        if (_input == -1)
+        {
+            _input = 0;
+        }
+        else
+        {
             return;
-       }
+        }
     }
+
     public void Resetright()
     {
         if (_input == 1)
