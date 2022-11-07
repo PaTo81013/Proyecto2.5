@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1047720999861471268}
   - component: {fileID: -247216642501095730}
   - component: {fileID: -921884418383748184}
+  - component: {fileID: 3779609071758190257}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.016852975, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d927e2ae77efca244b1a3aa1bafd1c80, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcc0b3163eca2e41b87fbeebac4255a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 4
+  _velocity: 4
 --- !u!61 &-1047720999861471268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 54, y: 72}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160,3 +161,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec75e3bb6d475745b3dcf108619050b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3779609071758190257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833829899300013340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8191d91b872ced046a6fd2f3bdc0604b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 7950309235693781073, guid: 1aee6736221aaef4bb65cbc8a1cb9abe, type: 3}

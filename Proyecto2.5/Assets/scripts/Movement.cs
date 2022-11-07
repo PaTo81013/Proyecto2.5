@@ -1,44 +1,88 @@
 using UnityEngine;
 public class Movement : MonoBehaviour
 {
-    Rigidbody2D m_RigidBody;
-    float m_speed;
-    float movespeed = 10;
-    int jumpsNumber;
-    public int jumpsNumberValue;
-    bool isGrounded;
-    public Transform groundPositionCheck;
-    public LayerMask groundLayer;
+    [SerializeField] private Rigidbody2D _RigidBody;
+    [SerializeField] private float _speed;
+    [SerializeField] private float movespeed = 5;
+    [SerializeField] private float _input;
+    [SerializeField] private int _jumpsNumber;
+    [SerializeField] private int _jumpsNumberValue;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private Transform groundPositionCheck;
+    [SerializeField] private LayerMask groundLayer;
+
     void Start()
     {
-       m_RigidBody= GetComponent<Rigidbody2D>();
-        m_speed = 10f;
-        jumpsNumber = jumpsNumberValue;
+        _RigidBody = GetComponent<Rigidbody2D>();
+        _speed = 10f;
+        _jumpsNumber = _jumpsNumberValue;
     }
+
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundPositionCheck.position, 0.1f, groundLayer); 
-        if(isGrounded)
+        isGrounded = Physics2D.OverlapCircle(groundPositionCheck.position, 0.1f, groundLayer);
+        if (isGrounded)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpsNumber--;
-                m_RigidBody.velocity = transform.up * m_speed;
+                _jumpsNumber--;
+                _RigidBody.velocity = transform.up * _speed;
             }
         }
-        else if(jumpsNumber>0)
+
+        else if (_jumpsNumber > 0)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                jumpsNumber--;
-                m_RigidBody.velocity = transform.up * m_speed;
+                _jumpsNumber--;
+                _RigidBody.velocity = transform.up * _speed;
             }
         }
-        if(isGrounded&&m_RigidBody.velocity.y==0)
+
+        if (isGrounded && _RigidBody.velocity.y == 0)
         {
-            jumpsNumber = jumpsNumberValue;
+            _jumpsNumber = _jumpsNumberValue;
         }
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontalInput, 0) * movespeed * Time.deltaTime);   
+        //float horizontalInput = Input.GetAxis("Horizontal");
+        
+        //Vector2 _movespeed = m_RigidBody.velocity;
+        //_movespeed.x = Input.GetAxisRaw("Horizontal") * m_speed;
+        //m_RigidBody.velocity= _movespeed;
+
+    }
+    private void FixedUpdate()
+    {
+        transform.Translate(new Vector3(_input, 0) * movespeed * Time.fixedDeltaTime);
+    }
+
+    public void moveLeft()
+    {
+        _input = -1;
+    }
+    public void moveRight()
+    {
+        _input = 1;
+    }
+    public void Resetleft()
+    {
+       if(_input==-1)
+       {
+            _input=0;
+       }
+       else
+       {
+            return;
+       }
+    }
+    public void Resetright()
+    {
+        if (_input == 1)
+        {
+            _input = 0;
+        }
+        else
+        {
+            return;
+        }
     }
 }
