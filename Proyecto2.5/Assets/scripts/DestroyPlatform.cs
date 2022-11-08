@@ -8,6 +8,7 @@ public class DestroyPlatform : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+     
         }
     }
 }
