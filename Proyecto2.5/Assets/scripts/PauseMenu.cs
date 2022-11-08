@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject PauseBotton;
-    [SerializeField] private GameObject Pausemenu;
+    [SerializeField] private GameObject _pauseButton = null;
+    [SerializeField] private GameObject _pauseMenu = null;
 
    public void Pause()
     {
         Time.timeScale = 0f;
-        PauseBotton.SetActive(false);
-        Pausemenu.SetActive(true);
+        _pauseButton.SetActive(false);
+        _pauseMenu.SetActive(true);
    }
 
     public void Resume()
     {
         Time.timeScale = 1f;
-        PauseBotton.SetActive(true);
-        Pausemenu.SetActive(false);
+        _pauseButton.SetActive(true);
+        _pauseMenu.SetActive(false);
     }
 
     public void Restart()

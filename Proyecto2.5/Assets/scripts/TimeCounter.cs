@@ -1,43 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
 
 public class TimeCounter : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _TimerTxt = default;
-    public float _timeLeft = 40;
-    [SerializeField] private GameObject SceneChange;
-   
+    [SerializeField] private TextMeshProUGUI _timerText = default;
+    [SerializeField] private GameObject _sceneChange = default;
+    [SerializeField] private float _timeLeft = 40;
+
+    public static TimeCounter Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         Time.timeScale = 1;
     }
 
-    
+    public void IncreaseTime(float plus)
+    {
+        _timeLeft += plus;
+    }
+
     void Update()
     {
         if (_timeLeft > 0)
         {
             _timeLeft -= Time.deltaTime;
         }
-        else if (_timeLeft < 0)
-        {
 
-            Time.timeScale = 0;
-        }
-        UpdateTimer(_timeLeft, _TimerTxt);
+        UpdateTimer();
+
         if (_timeLeft <= 0)
         {
-            SceneChange.SetActive(true);
+            Time.timeScale = 0;
+            _sceneChange.SetActive(true);
         }
     }
-    private void UpdateTimer(float currentTimer, TextMeshProUGUI cronometer)
+
+    private void UpdateTimer()
     {
-        currentTimer += 1;
-        float minutes = Mathf.FloorToInt(currentTimer / 60);
-        float seconds = Mathf.FloorToInt(currentTimer % 60);
-        cronometer.text = String.Format("{0:00} : {1:00}", minutes, seconds);
+        float minutes = Mathf.FloorToInt(_timeLeft / 60);
+        float seconds = Mathf.FloorToInt(_timeLeft % 60);
+        _timerText.text = String.Format("{0:00} : {1:00}", minutes, seconds);
     }
 }

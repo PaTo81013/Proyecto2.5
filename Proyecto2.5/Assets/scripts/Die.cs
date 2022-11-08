@@ -7,7 +7,7 @@ public class Die : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("balon"))
+        if (other.gameObject.CompareTag("ball"))
         {
             Destroy(gameObject);
             _playerDie.SetActive(true);

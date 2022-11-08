@@ -8,6 +8,7 @@ TagManager:
   - GameManager
   - balon
   - Floor
+  - ball
   layers:
   - Default
   - TransparentFX

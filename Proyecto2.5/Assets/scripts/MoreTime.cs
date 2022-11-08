@@ -2,20 +2,11 @@ using UnityEngine;
 
 public class MoreTime : MonoBehaviour
 {
-    [SerializeField] GameObject GameManager;
-  
-    void Start()
-    {
-        GameManager = GameObject.FindGameObjectWithTag("GameManager");
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("balon"))
+        if(collision.CompareTag("ball"))
         {
-            Destroy(gameObject);
-            GameManager.GetComponent<GameManager>().IncreaseTime(2);
+            TimeCounter.Instance.IncreaseTime(1);
         }
     }
-
 }

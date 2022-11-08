@@ -10,6 +10,5 @@ public class DestroyWhenItTouch : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 }
