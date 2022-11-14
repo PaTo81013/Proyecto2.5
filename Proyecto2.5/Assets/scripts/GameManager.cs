@@ -3,19 +3,27 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI UIScore;
-    private float hp=3;
-    private float score=0;
+    [SerializeField] private TextMeshProUGUI _uiScore;
+    [SerializeField] private TextMeshProUGUI _uiTime;
+    private float hp = 3;
+    private float score = 0;
     public float HP => hp;
     public float Score => score;
-     void Start()
+    public static GameManager Instance { get; private set; }
+
+    void Start()
     {
-        UIScore.text = Score.ToString("Score: " + Score);
+        _uiScore.text = Score.ToString("Score: " + Score);
     }
+
     public void IncreaseScore(float plus)
     {
         score += plus;
-        UIScore.text = Score.ToString("Score: " + Score);
+        _uiScore.text = Score.ToString("Score: " + Score);
     }
-    
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 }
