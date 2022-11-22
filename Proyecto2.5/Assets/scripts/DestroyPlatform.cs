@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DestroyPlatform : MonoBehaviour
 {
-    [SerializeField] public GameObject _effect=null;
+    [SerializeField] public GameObject _effect = null;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("ball"))
