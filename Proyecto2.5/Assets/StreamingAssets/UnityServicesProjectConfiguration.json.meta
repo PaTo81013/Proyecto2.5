@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Proyecto2.5/Assets/StreamingAssets/UnityServicesProjectConfiguration.json.meta
 guid: c8bbcb23eb0dc6a4393ee17eee8e6403
+========
+guid: 3936b34da6010da47ac91ce6f35bb0cc
+folderAsset: yes
+>>>>>>>> main:Proyecto2.5/Assets/Plugins/Demigiant.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
