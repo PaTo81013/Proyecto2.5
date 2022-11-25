@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Proyecto2.5/Assets/Plugins/Demigiant.meta
 guid: 3936b34da6010da47ac91ce6f35bb0cc
+========
+guid: 523e27ac0e7d2e348aee3426d641f5b7
+>>>>>>>> main:Proyecto2.5/Assets/Resources.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
