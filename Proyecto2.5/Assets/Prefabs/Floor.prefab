@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &944396208576126546
+--- !u!1 &1331683288200003085
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 944396208576126545}
-  - component: {fileID: 944396208576126544}
-  - component: {fileID: 944396208576126547}
+  - component: {fileID: 2049186150814282448}
+  - component: {fileID: 4569340213509640960}
+  - component: {fileID: 7031483295089254365}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Floor
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &944396208576126545
+--- !u!4 &2049186150814282448
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944396208576126546}
+  m_GameObject: {fileID: 1331683288200003085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.1148, y: -4.7393, z: 0}
   m_LocalScale: {x: 1.4043088, y: 0.11417836, z: 1}
@@ -33,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &944396208576126544
+--- !u!212 &4569340213509640960
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944396208576126546}
+  m_GameObject: {fileID: 1331683288200003085}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &944396208576126547
+--- !u!61 &7031483295089254365
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944396208576126546}
+  m_GameObject: {fileID: 1331683288200003085}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
