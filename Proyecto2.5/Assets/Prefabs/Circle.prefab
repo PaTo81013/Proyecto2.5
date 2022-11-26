@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcc0b3163eca2e41b87fbeebac4255a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocity: 4
+  _velocity: 2
 --- !u!61 &-1047720999861471268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 1822053303201680085, guid: e0275df7c18c3714d9f41642d54fd5d3, type: 3}
+  _destroySound: {fileID: 8300000, guid: eeafb4ff1fca1ee4f812d12488e49686, type: 3}
 --- !u!114 &3779609071758190257
 MonoBehaviour:
   m_ObjectHideFlags: 0
