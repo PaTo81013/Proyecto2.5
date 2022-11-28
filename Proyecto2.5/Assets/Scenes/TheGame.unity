@@ -290,7 +290,7 @@ MonoBehaviour:
   _platformStartPosition: {fileID: 81470400}
   _platformParent: {fileID: 81470400}
   _platformPrefab: {fileID: 7950309235693781073, guid: 075c63a55e05c9947890bfb554763f1d, type: 3}
-  _spawnInterval: 2.5
+  _spawnInterval: 1.5
 --- !u!4 &81470400
 Transform:
   m_ObjectHideFlags: 0
